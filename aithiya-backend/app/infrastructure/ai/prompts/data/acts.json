@@ -1,0 +1,89 @@
+{
+  "_comment": [
+    "Registry mapping internal title prefixes (the --title-prefix passed at ingest, e.g. 'CIVIL-PROCEDURE-CODE') to structured citation fields.",
+    "Lookup is case-insensitive and ignores chunk suffixes; both the raw prefix and any alias listed under 'aliases' resolve to the same record.",
+    "Add a new entry whenever you ingest a new Act so user-facing citations show a human-readable Act name + Act No. instead of the internal code.",
+    "Fields used in citation labels: act_name (required), act_no, year, jurisdiction. Section / article come from the model's chunk text, not this file."
+  ],
+  "acts": [
+    {
+      "code": "CIVIL-PROCEDURE-CODE",
+      "aliases": ["CPC", "CIVIL-PROCEDURE", "CIVIL_PROCEDURE_CODE"],
+      "act_name": "Civil Procedure Code",
+      "act_no": "2 of 1889",
+      "year": "1889",
+      "jurisdiction": "Sri Lanka"
+    },
+    {
+      "code": "CRIMINAL-PROCEDURE-CODE",
+      "aliases": ["CCP", "CODE-OF-CRIMINAL-PROCEDURE", "CRPC"],
+      "act_name": "Code of Criminal Procedure Act",
+      "act_no": "15 of 1979",
+      "year": "1979",
+      "jurisdiction": "Sri Lanka"
+    },
+    {
+      "code": "PENAL-CODE",
+      "aliases": ["PC", "PENAL_CODE"],
+      "act_name": "Penal Code",
+      "act_no": "2 of 1883",
+      "year": "1883",
+      "jurisdiction": "Sri Lanka"
+    },
+    {
+      "code": "CONSTITUTION",
+      "aliases": ["SL-CONSTITUTION", "CONST", "1978-CONSTITUTION"],
+      "act_name": "Constitution of the Democratic Socialist Republic of Sri Lanka",
+      "year": "1978",
+      "jurisdiction": "Sri Lanka"
+    },
+    {
+      "code": "EVIDENCE-ORDINANCE",
+      "aliases": ["EVIDENCE"],
+      "act_name": "Evidence Ordinance",
+      "act_no": "14 of 1895",
+      "year": "1895",
+      "jurisdiction": "Sri Lanka"
+    },
+    {
+      "code": "MOTOR-TRAFFIC-ACT",
+      "aliases": ["MTA", "MOTOR-TRAFFIC"],
+      "act_name": "Motor Traffic Act",
+      "act_no": "14 of 1951",
+      "year": "1951",
+      "jurisdiction": "Sri Lanka"
+    },
+    {
+      "code": "INDUSTRIAL-DISPUTES-ACT",
+      "aliases": ["IDA"],
+      "act_name": "Industrial Disputes Act",
+      "act_no": "43 of 1950",
+      "year": "1950",
+      "jurisdiction": "Sri Lanka"
+    },
+    {
+      "code": "SHOP-AND-OFFICE-ACT",
+      "aliases": ["SHOP-AND-OFFICE-EMPLOYEES-ACT", "SOEA"],
+      "act_name": "Shop and Office Employees (Regulation of Employment and Remuneration) Act",
+      "act_no": "19 of 1954",
+      "year": "1954",
+      "jurisdiction": "Sri Lanka"
+    },
+    {
+      "code": "RENT-ACT",
+      "aliases": [],
+      "act_name": "Rent Act",
+      "act_no": "7 of 1972",
+      "year": "1972",
+      "jurisdiction": "Sri Lanka"
+    },
+    {
+      "code": "ONLINE-SAFETY-ACT",
+      "aliases": ["OSA"],
+      "act_name": "Online Safety Act",
+      "act_no": "9 of 2024",
+      "year": "2024",
+      "jurisdiction": "Sri Lanka"
+    }
+  ]
+}

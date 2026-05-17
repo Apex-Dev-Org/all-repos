@@ -1,0 +1,30 @@
+{
+  "_comment": [
+    "Preflight refusal rules. Each entry is a single regex matched against the user's raw query.",
+    "If any pattern matches, the orchestrator returns the refusal in refusal.md without spending tokens.",
+    "Keep patterns conservative — false positives block real users. Patterns are matched case-insensitively unless the entry sets 'ignore_case': false.",
+    "Categories are surface-stable; the chat service uses them only for logging."
+  ],
+  "patterns": [
+    {
+      "category": "violence",
+      "pattern": "\\b(?:how (?:do i|to)|help me|teach me|explain how to|give me (?:steps|instructions))\\b[^.]{0,80}\\b(?:kill|murder|assassinate|stab|poison|bomb|shoot|attack|hurt|injure|maim|torture)\\b[^.]{0,80}\\b(?:him|her|them|someone|person|people|victim|wife|husband|child|kid|target)\\b"
+    },
+    {
+      "category": "forgery",
+      "pattern": "\\b(?:how (?:do i|to)|help me|teach me|show me how to|give me a template (?:to|for))\\b[^.]{0,80}\\b(?:forge|fake|fabricate|counterfeit|falsify)\\b[^.]{0,80}\\b(?:signature|court order|summons|judgment|affidavit|deed|id card|nic|passport|stamp|notary seal|police report)\\b"
+    },
+    {
+      "category": "evidence_tampering",
+      "pattern": "\\b(?:how (?:do i|to)|help me|teach me)\\b[^.]{0,80}\\b(?:destroy|hide|tamper with|plant|alter|delete)\\b[^.]{0,80}\\b(?:evidence|witness statement|cctv|recordings?|documents?)\\b"
+    },
+    {
+      "category": "intimidation",
+      "pattern": "\\b(?:how (?:do i|to)|help me|teach me|give me)\\b[^.]{0,80}\\b(?:threaten|intimidate|blackmail|silence|bribe|coerce)\\b[^.]{0,80}\\b(?:witness|judge|magistrate|police officer|complainant|victim|juror)\\b"
+    },
+    {
+      "category": "prompt_extraction",
+      "pattern": "\\b(?:reveal|show|print|repeat|expose|leak|dump)\\b[^.]{0,40}\\b(?:your|the)\\b[^.]{0,30}\\b(?:system prompt|system instructions?|hidden prompt|developer (?:prompt|instructions?)|initial prompt)\\b"
+    }
+  ]
+}
